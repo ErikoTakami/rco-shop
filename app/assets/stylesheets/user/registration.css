@@ -160,6 +160,7 @@
   padding: 4px;
   border-radius: 3px;
   margin-left: 3px;
+  white-space: nowrap;
 }
 
 .form-describe {
