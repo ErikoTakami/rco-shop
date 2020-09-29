@@ -1,16 +1,106 @@
-.logout {
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header {
+  width: 100vw;
+  background-color: white;
+  border-top: 15px solid black;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  height: 80px;
+}
+
+/* ヘッダーロゴ */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.rco-logo {
+  width: 360px;
+  height: 100%;
+  margin-right: 5vw;
+}
+
+/* ヘッダー右メニュー */
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  width: 55vw;
+}
+
+.search-form {
+  width: 30vw;
+  height: 35px;
+  display: flex;
+  position: relative;
+}
+
+.input-box {
+  width: 100%;
+  border: 1px solid gray;
+  padding-left: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  outline:0;
+}
+
+.search-button {
+  width: 35px;
+  border: 0;
+  cursor: pointer;
+  background-color: #000000;
+  outline:0;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  margin-left: 30px;
+  height: 35px;
+}
+
+/* .user-nickname {
   text-decoration: none;
+  margin-right: 3vw;
   color: #333333;
+  font-weight: bold;
+} */
+
+.login-logout {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
 }
 
 .login {
-  text-decoration: none;
-  line-height: 32px;
-  margin-right: 3vw;
-  color: #333333;
+  height: 35px;
+  display: block;
 }
 
-.sign-up {
-  text-decoration: none;
-  color: #333333;
+/* ヘッダー下メニュー */
+.menu-nav {
+  height: 35px;
+  width: 100%;
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-right {
+  color: white;
+  font-size: 13px;
+  margin-right: 20px;
 }
