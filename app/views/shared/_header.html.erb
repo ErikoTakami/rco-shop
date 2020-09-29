@@ -1,0 +1,34 @@
+<header class='top-page-header'>
+  <div class="header-container">
+    <div class="header-left">
+      <%= image_tag '/images/rco_logo.svg', class:"rco-logo" %>
+    </div>
+    <div class="header-right">
+      <form class="search-form" action="#">
+        <input class='input-box'>
+        <button class="search-button">
+          <%= image_tag "/images/icon_src.svg", class:"search-icon" %>
+        </button>
+      </form>
+      <div class="cart">
+        <%= image_tag "/images/icon_crt.svg", class:"cart-icon" %>
+      </div>
+      <div class="login-logout">
+        <% if user_signed_in? %>
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
+        <% else %>
+          <%= link_to image_tag("/images/btn_login.png", class:"login"), new_user_session_path %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="menu-nav">
+    <div class="menu-left">
+    </div>
+    <div class="menu-right">
+      <% if user_signed_in? %>
+        こんにちは、<%= current_user.nickname %>さん
+      <% end %>
+    </div>
+  </div>
+</header>
