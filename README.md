@@ -61,6 +61,7 @@
 
 ### Association
 - has_many :carts, through: carts_items
+- has_one_attached :image
 
 ## carts_itemsテーブル
 
