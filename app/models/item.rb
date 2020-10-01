@@ -5,7 +5,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :format
   belongs_to_active_hash :status
 
-  validates :title, :artist, :text, :genre_id, :format_id, :status_id, 
+  validates :title, :artist, :text, :genre_id, :format_id, :status_id,
             :price, :stock, :image, presence: true
 
   with_options numericality: { other_than: 1 } do
@@ -14,5 +14,4 @@ class Item < ApplicationRecord
     validates :status_id
   end
   validates :price, numericality: { only_integer: true, message: 'は半角数字で入力してください' }
-
 end

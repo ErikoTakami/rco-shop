@@ -4,7 +4,7 @@ FactoryBot.define do
     artist { Faker::Artist.name }
     text { Faker::Lorem.sentence }
     genre_id { Faker::Number.between(from: 2, to: 19) }
-    country { 'JP' }  
+    country { 'JP' }
     format_id { Faker::Number.between(from: 2, to: 12) }
     status_id { Faker::Number.between(from: 2, to: 10) }
     price { '3000' }

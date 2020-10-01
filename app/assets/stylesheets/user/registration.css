@@ -44,6 +44,7 @@
 .form-text-wrap {
   width: 30%;
   height: 20%;
+  white-space: nowrap;
 }
 
 .form-text {
