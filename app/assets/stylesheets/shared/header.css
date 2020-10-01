@@ -40,7 +40,6 @@
 .rco-logo {
   width: 360px;
   height: 100%;
-  margin-right: 5vw;
 }
 
 /* ヘッダー右メニュー */
@@ -108,7 +107,7 @@
 .menu-nav {
   height: 40px;
   width: 100%;
-  background-color: red;
+  background-color: #F40000;
   display: flex;
   justify-content: space-between;
   align-items: center;
