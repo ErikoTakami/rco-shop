@@ -5,15 +5,15 @@ ja:
         nickname: ニックネーム
     attributes: 
       item:
-        text: 商品の説明
+        title: タイトル
+        artist: アーティスト
+        text: 商品説明
         image: 画像
-        name: 商品名
-        price: 価格
-        category_id: カテゴリー
+        genre_id: ジャンル
         status_id: 商品の状態
-        shipping_charges_id: 配送料の負担
-        shipping_origin_id: 発送元の地域
-        days_until_shipping_id: 発送までの日数
+        format_id: フォーマット
+        price: 価格
+        stock: 在庫
     attributes: 
       item_purchase:
         post_code: 郵便番号

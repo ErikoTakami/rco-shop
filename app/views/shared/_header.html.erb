@@ -1,4 +1,9 @@
 <header class='top-page-header'>
+  <div class="header-top-nav">
+    <% if user_signed_in? && current_user.admin? %>
+      <%= link_to '>>商品出品', new_item_path, class:"new-item-link" %>
+    <% end %>
+  </div>
   <div class="header-container">
     <div class="header-left">
       <%= image_tag '/images/rco_logo.svg', class:"rco-logo" %>

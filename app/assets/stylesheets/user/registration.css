@@ -9,7 +9,7 @@
 
 /* form-wrapは商品購入画面でも使用しています */
 .form-wrap {
-  width: 70%;
+  width: 50%;
   background-color: white;
   padding-bottom: 50px;
   margin: 50px 0 20px 0;
@@ -20,6 +20,7 @@
   height: 60px;
   text-align: center;
   font-size: 22px;
+  margin-bottom: 30px;
 }
 
 .form-header-text {
@@ -41,8 +42,9 @@
 }
 
 .form-text-wrap {
-  width: 40%;
+  width: 30%;
   height: 20%;
+  white-space: nowrap;
 }
 
 .form-text {
@@ -51,8 +53,8 @@
 }
 
 .input-default {
-  width: 100%;
-  margin-top: 5px;
+  width: 75%;
+  margin: 5px 0 0 20px;
   height: 35px;
   padding: 10px 16px 8px;
   border-radius: 4px;
@@ -119,8 +121,8 @@
 }
 
 .form-bottom-text {
-  font-size: 14px;
-  margin: 20px auto;
+  font-size: 13px;
+  margin: 30px auto;
   text-align: center;
 }
 
@@ -162,6 +164,16 @@
   margin-left: 3px;
   white-space: nowrap;
 }
+
+/* .disindispensable {
+  color: white;
+  background-color: black;
+  font-size: 11px;
+  padding: 4px;
+  border-radius: 3px;
+  margin-left: 3px;
+  white-space: nowrap;
+} */
 
 .form-describe {
   font-size: 14px;
