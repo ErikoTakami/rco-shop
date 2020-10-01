@@ -39,7 +39,7 @@
         <label class="form-text">商品説明</label>
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :text, class:"item-input-text", id:"title", rows:"4" %>
+      <%= f.text_area :text, class:"item-input-text", id:"title" %>
     </div>
     <div class="form-group">
       <div class='form-text-wrap'>
@@ -73,17 +73,17 @@
         <label class="form-text">価格</label>
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_field :price, class:"int-input", id:"item-price" %>
+      <%= f.text_field :price, class:"int-input", id:"item-price", placeholder:"半角数字" %>
     </div>
     <div class="form-group">
       <div class='form-text-wrap'>
         <label class="form-text">在庫数</label>
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_field :stock, class:"int-input", id:"stock" %>
+      <%= f.text_field :stock, class:"int-input", id:"stock", placeholder:"半角数字" %>
     </div>
     <div class='login-btn'>
-      <%= f.submit "出品する" ,class:"login-red-btn" %>
+      <%= f.submit "出品する" ,class:"login-gray-btn" %>
     </div>
   </div>
 <% end %>
