@@ -3,21 +3,25 @@
   <div class="item-wrapper">
     <% @items.each do |item| %>
       <div class="item">
-        <div class="item-image-content">
-          <%= image_tag item.image, class:"item-image" %>
-        </div>
-        <div class="item-format">
-          <%= item.format.name %>
-        </div>
-        <div class="item-artist">
-          <%= item.artist %>
-        </div>
-        <div class="item-title">
-          <%= item.title %>
-        </div>
-        <div class="item-price">
-          <%= item.price %>円(税込み)
-        </div>
+        <%= link_to item_path(item), class:"item-path" do %>
+          <div class="item-image-content">
+            <%= image_tag item.image, class:"item-image" %>
+          </div>
+        <% end %>
+          <div class="item-format">
+            <%= item.format.name %>
+          </div>
+          <div class="item-artist">
+            <%= item.artist %>
+          </div>
+        <%= link_to item_path(item), class:"item-path" do %>
+          <div class="item-title">
+            <%= item.title %>
+          </div>
+          <div class="item-price">
+            <%= item.price %>円(税込み)
+          </div>
+        <% end %>
       </div>
     <% end %>
   </div>
