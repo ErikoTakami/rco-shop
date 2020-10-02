@@ -1,0 +1,27 @@
+<%= render "shared/header" %>
+<div class="show-main-wrapper">
+  <div class="show-item-wrapper">
+    <div class="image-wrapper">
+      <%= image_tag @item.image, class:"item-box-img" %>
+      <div class="show-format"><%= @item.format.name %></div>
+    </div>
+    <div class="text-wrapper">
+      <div class="show-title"><%= @item.title %></div>
+      <div class="show-artist"><%= @item.artist %></div>
+      <div class="show-text"><%= @item.text %></div>
+      <div class="show-genre"><%= @item.genre.name %></div>
+      
+      <div class="show-stock">
+        <% if @item.stock > 0 %>
+          <p class="show-in-stock">在庫あり</p>
+        <% else %>
+          <p class="show-sold-out">SOLD OUT</p>
+        <% end %>
+      </div>
+      <div class="show-status"><%= @item.status.name %></div>
+      <% unless @item.stock == 0%>
+        <button class="to-cart-btn">カートに入れる</button>
+      <% end %>
+    </div>
+  </div>
+</div>
