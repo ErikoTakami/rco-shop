@@ -81,14 +81,19 @@
   line-height: 18px;
 }
 
+.btn-zone {
+  display: flex;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+}
+
 .to-cart-btn {
   width: 200px;
   border: 2px solid black;
   padding: 7px;
   text-align: center;
   background-color: white;
-  position: absolute;
-  bottom: 0px;
   cursor: pointer;
   transition: 0.4s ;
 }
@@ -96,4 +101,8 @@
 .to-cart-btn:hover {
   background-color: black;
   color: white;
+}
+
+.to-edit-btn {
+  margin-left: 15px;
 }
