@@ -19,9 +19,17 @@
         <% end %>
       </div>
       <div class="show-status"><%= @item.status.name %></div>
-      <% unless @item.stock == 0%>
-        <button class="to-cart-btn">カートに入れる</button>
-      <% end %>
+      <div class="btn-zone">
+        <% unless @item.stock == 0%>
+          <button class="to-cart-btn">カートに入れる</button>
+        <% end %>
+        <% if user_signed_in? && current_user.admin? %>
+          <%= link_to  edit_item_path(@item), class:"edit-item-path" do %>
+            <button class="to-edit-btn">編集・削除</button>
+          <% end %>
+        <% end %>
+      </div>
+      
     </div>
   </div>
 </div>
