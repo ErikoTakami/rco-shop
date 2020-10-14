@@ -1,5 +1,7 @@
 class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
+  has_many :cart_items
+  has_many :carts, through: :cart_items
   has_one_attached :image
   belongs_to_active_hash :genre
   belongs_to_active_hash :format
