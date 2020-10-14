@@ -16,7 +16,15 @@
         </button>
       </form>
       <div class="cart">
-        <%= image_tag "/images/icon_crt.svg", class:"cart-icon" %>
+        <% if user_signed_in? %>
+          <%= link_to "/carts/#{session[:cart_id]}" do %>
+            <%= image_tag "/images/icon_crt.svg", class:"cart-icon" %>
+          <% end %>
+        <% else %>
+          <%= link_to new_user_session_path do %>
+            <%= image_tag "/images/icon_crt.svg", class:"cart-icon" %>
+          <% end %>
+        <% end %>
       </div>
       <div class="login-logout">
         <% if user_signed_in? %>

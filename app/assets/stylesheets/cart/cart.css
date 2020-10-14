@@ -1,0 +1,75 @@
+.cart-wrapper {
+  width: 100%;
+  height: 100vh;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 40px auto 100px auto;
+}
+
+.cart-item {
+  margin: 10px 0;
+  padding: 10px 15px 20px 15px;
+  display: flex;
+  /* background-color: pink; */
+  position: relative;
+  border-bottom: 1px solid black;
+}
+
+.cart-item-image {
+  width: 150px;
+  height: 150px;
+  margin-right: 30px;
+}
+
+.cart-item-title {
+  font-size: 18px;
+}
+
+.cart-item-artist {
+  font-size: 18px;
+} 
+
+.cart-item-price {
+  /* border-bottom: 1px solid black; */
+  padding-bottom: 4px;
+}
+
+.cart-item-price-change {
+  display: flex;
+  padding: 7px 0 3px 0;
+  /* background-color: yellow; */
+}
+
+.cart-item-edit {
+  margin-left: 40px;
+  /* position: absolute;
+  right: 20px;
+  bottom: 40px; */
+}
+
+.cart-item-price-calc {
+  font-size: 18px;
+  position: absolute;
+  bottom: 12px;
+  right: 5px;
+  border-bottom: 1px groove black;
+}
+
+.cart-item-destroy {
+  position: absolute;
+  bottom: 13px;
+}
+
+.cart-item-total-calc {
+  font-size: 20px;
+  margin-top: 10px;
+  text-align: right;
+}
+
+/* .quantity-submit {
+  display: none;
+} */
