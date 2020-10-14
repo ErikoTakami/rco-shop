@@ -1,0 +1,50 @@
+<%= render "shared/header"%>
+<div class="cart-wrapper">
+
+  <div class='form-header'>
+      <h1 class='form-header-text'>
+        ショッピングカート
+      </h1>
+    </div>
+
+  <div class="cart-container">
+    <% @cart_items.each do |cart_item| %>
+      <div class="cart-item" data-id=<%= cart_item.id %>>
+        <div class="cart-item-left">
+          <div class="cart-image">
+            <%= image_tag cart_item.item.image, class:"cart-item-image" %>
+          </div>
+        </div>
+        <div class="cart-item-right">
+          <div class="cart-item-title">
+            <%= cart_item.item.title %>
+          </div>
+          <div class="cart-item-artist">
+            <%= cart_item.item.artist %>
+          </div>
+          <div class="cart-item-price-change">
+            <div class="cart-item-price">
+              単価 : <span class="item-price"><%= cart_item.item.price %></span>円(税込)
+            </div>
+            <div class="cart-item-edit">
+              <%= form_with url: "/items/#{cart_item.item_id}/update_item", name: "quantityForm", method: :put do |f| %>
+                <%= f.label :quantity, "数量" %>
+                <%= f.select :quantity, stock_array_maker(cart_item), name:"quantity", id:"quantity", selected: cart_item.quantity %>
+                <%= f.submit "変更", id:"commit", style:"display:none;" %>
+              <% end %>
+            </div>
+          </div>
+          <div class="cart-item-price-calc">
+            合計 : <span class="item-total-price"><%= cart_item_price_calc(cart_item) %></span>円(税込)
+          </div>
+          <div class="cart-item-destroy">
+            <%= link_to "削除", "/items/#{cart_item.item_id}/delete_item", method: :delete %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <div class="cart-item-total-calc">
+      合計 : <span id="cart-total-price"></span>円(税込)
+    </div>
+  </div>
+</div>
