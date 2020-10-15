@@ -43,10 +43,12 @@
 ### 認証機能
 - サインイン、サインアップ機能 ( devise )
   - email、パスワード、ユーザー名必須
+  
+<br>
 
 ### 管理者機能
 - 管理者ユーザー登録 ( devise )
-<br>
+
 <a href="https://gyazo.com/fdf12686a81fa28a4eb78a076bc2ebf0"><img src="https://i.gyazo.com/fdf12686a81fa28a4eb78a076bc2ebf0.png" alt="Image from Gyazo" width="194"/></a><br>
 <a href="https://gyazo.com/e759da9dfe24c4a0bd7e7ba717e6e25e"><img src="https://i.gyazo.com/e759da9dfe24c4a0bd7e7ba717e6e25e.png" alt="Image from Gyazo" width="197"/></a>
 <br>
