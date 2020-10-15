@@ -51,7 +51,7 @@
 <a href="https://gyazo.com/e759da9dfe24c4a0bd7e7ba717e6e25e"><img src="https://i.gyazo.com/e759da9dfe24c4a0bd7e7ba717e6e25e.png" alt="Image from Gyazo" width="197"/></a>
 <br>
 
-- 管理者ユーザーにのみ、ヘッダー右上部に出品ページへのリンクが表示されるようにしています
+管理者ユーザーにのみ、ヘッダー右上部に出品ページへのリンクが表示されるようにしています
 
 <br>
 
@@ -63,6 +63,8 @@
 - 商品詳細ページ
   - 「カートに入れる」ボタンをクリックでカートに商品を入れる
 - 商品編集・削除ページ ( 管理者ユーザーにのみ編集/削除権限を設定 )
+
+<br>
 
 ### カート機能
 - カート内商品一覧ページ
@@ -87,6 +89,10 @@
 
 ## DB設計
 
+<br>
+<a href="https://gyazo.com/b7a57d9124cdcfd6f8af16d4f4df1ef9"><img src="https://i.gyazo.com/b7a57d9124cdcfd6f8af16d4f4df1ef9.png" alt="Image from Gyazo" width="843"/></a>
+<br>
+
 ## usersテーブル
 
 | Column                | Type    | Options     |
@@ -100,6 +106,8 @@
 ### Association
 - has_many :addresses
 - has_one :cart
+
+<br>
 
 ## addressesテーブル
 
@@ -120,6 +128,8 @@
 ### Association
 - belongs_to :user
 
+<br>
+
 ## cartsテーブル
 
 | Column | Type       | Options                        |
@@ -130,6 +140,8 @@
 - has_many :cart_items
 - belongs_to :user
 - has_one :order
+
+<br>
 
 ## itemsテーブル
 
@@ -149,6 +161,8 @@
 - has_many :cart_items
 - has_one_attached :image
 
+<br>
+
 ## cart_itemsテーブル
 
 | Column   | Type       | Options                        |
@@ -160,6 +174,8 @@
 ### Association
 - belongs_to :cart
 - belongs_to :item
+
+<br>
 
 ## ordersテーブル
 
