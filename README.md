@@ -1,5 +1,3 @@
-### README
-
 <h1 align="center">Record Conveni Online</h1>
 <br>
 <br>
@@ -64,7 +62,7 @@
   - カート内商品削除機能
   - 合計金額計算機能
   <br>
-<a href="https://gyazo.com/a21c2266d08aab257491a34c5622e9d2"><img src="https://i.gyazo.com/a21c2266d08aab257491a34c5622e9d2.gif" alt="Image from Gyazo" width="500"/></a>
+<a href="https://gyazo.com/a9dcfce44d14fdc31a480959588a648c"><img src="https://i.gyazo.com/a9dcfce44d14fdc31a480959588a648c.gif" alt="Image from Gyazo" width="500"/></a>
 
 ### 購入機能
 - 現在実装中です
