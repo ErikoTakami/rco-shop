@@ -143,6 +143,7 @@
 
 ### Association
 - has_many :cart_items
+- has_many :items, through: :cart_items
 - belongs_to :user
 - has_one :order
 
@@ -164,6 +165,7 @@
 
 ### Association
 - has_many :cart_items
+- has_many :carts, through: :cart_items
 - has_one_attached :image
 
 <br>
