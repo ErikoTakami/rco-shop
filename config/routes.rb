@@ -7,5 +7,10 @@ Rails.application.routes.draw do
     put '/update_item' => 'carts#update_item'
     delete '/delete_item' => 'carts#delete_item'
   end
+
+  post '/order', to: 'orders#create'
+  get '/order', to: 'orders#index'
+  get '/order/:id', to: 'orders#new'
+  delete '/order/:id', to:'orders#destroy'
 end
 
