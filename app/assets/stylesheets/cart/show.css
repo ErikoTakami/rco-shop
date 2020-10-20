@@ -73,3 +73,12 @@
 /* .quantity-submit {
   display: none;
 } */
+.to-order-btn {
+  width: 200px;
+  border: 2px solid black;
+  padding: 7px;
+  text-align: center;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.4s ;
+}
