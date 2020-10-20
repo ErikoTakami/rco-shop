@@ -1,0 +1,53 @@
+<%= render "shared/second-header"%>
+<h1>注文内容の確認</h1>
+<p>カートには以下の商品が入っています。ご確認ください。</p>
+<div class="items-table">
+  <table border="1" width="800px;">
+    <thead>
+      <tr>
+        <th class="order-table-head" style="width:40%;" colspan="2">商品名</th>
+        <th class="order-table-head" style="width:10%;">販売価格</th>
+        <th class="order-table-head" style="width:5%;">数量</th>
+        <th class="order-table-head" style="width:10%;">小計</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @cart_items.each do |cart_item| %>
+        <tr>
+          <td class="order-image">
+            <%= image_tag cart_item.item.image, class:"cart-item-image" %>
+          </td>
+          <td class="order-item">
+            <%= cart_item.item.title%>/
+            <%= cart_item.item.artist %>
+          </td>
+          <td class="order-price">
+            <%= cart_item.item.price %>円
+          </td>
+          <td class="order-quantity">
+            <%= cart_item.quantity %>
+          </td>
+          <td class="order-item-total-price">
+            <span class="item-total-price"><%= cart_item_price_calc(cart_item) %></span>円(税込)
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>合計金額</td>
+        <td id="cart-total-price"></td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="https://checkout.pay.jp/"
+  class="payjp-button"
+  data-key="pk_test_0383a1b8f91e8a6e3ea0e2a9"
+  data-submit-text="トークンを作成する"
+  data-partial="true">
+</script>
