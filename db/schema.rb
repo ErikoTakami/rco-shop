@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_23_074432) do
+ActiveRecord::Schema.define(version: 2020_10_23_082500) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -90,6 +90,15 @@ ActiveRecord::Schema.define(version: 2020_10_23_074432) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "order_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "order_id", null: false
+    t.bigint "cart_item_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["cart_item_id"], name: "index_order_details_on_cart_item_id"
+    t.index ["order_id"], name: "index_order_details_on_order_id"
+  end
+
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "total_price", null: false
     t.bigint "user_id", null: false
@@ -121,6 +130,8 @@ ActiveRecord::Schema.define(version: 2020_10_23_074432) do
   add_foreign_key "cart_items", "carts"
   add_foreign_key "cart_items", "items"
   add_foreign_key "carts", "users"
+  add_foreign_key "order_details", "cart_items"
+  add_foreign_key "order_details", "orders"
   add_foreign_key "orders", "addresses"
   add_foreign_key "orders", "users"
 end
