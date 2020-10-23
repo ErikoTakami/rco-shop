@@ -12,10 +12,6 @@ function quantitySelectPriceCalc() {
       sum += price
     });
     cartTotalPrice.innerHTML = sum;
-    // 合計金額をorder#createに送信する
-    const renderDom = document.getElementById("charge-form");
-    const totalPriceObj = `<input value=${sum}, type="hidden", name="total_price">`;
-    renderDom.insertAdjacentHTML("beforeend", totalPriceObj);
   });
 
   let quantities = document.querySelectorAll("#quantity");
