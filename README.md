@@ -73,9 +73,11 @@
 
 ### カート機能
 - カート内商品一覧ページ
+  - sessionを用いたカート機能
   - 在庫数に応じた商品の購入数の設定機能
   - カート内商品削除機能
-  - 合計金額計算機能
+  - JavaScriptを用いた合計金額計算機能
+  - JavaScriptを用いた数量変更ボタンの実装( 変更ボタン無しで数量変更が可能 )
   <br>
 <a href="https://gyazo.com/a9dcfce44d14fdc31a480959588a648c"><img src="https://i.gyazo.com/a9dcfce44d14fdc31a480959588a648c.gif" alt="Image from Gyazo" width="500"/></a>
 
