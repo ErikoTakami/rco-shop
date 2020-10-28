@@ -1,13 +1,18 @@
-# class CardsController < ApplicationController
+class CardsController < ApplicationController
+
 #   require "payjp"
 
 #   #カードを登録
-#   def new
-#     card = Card.where(user_id: current_user.id)
-#     redirect_to action: "show" if card.exists?
-#   end
+  def new
+    # card = Card.where(user_id: current_user.id)
+    # redirect_to action: "show" if card.exists?
+  end
 
-  
+  def create
+    #customerオブジェクトを作成
+    
+  end
+
 #   def pay
 #     Payjp.api_key = Rails.application.credentials.payjp[:PAYJP_PRIVATE_KEY]
 #     if params['payjp-token'].blank?
@@ -27,4 +32,4 @@
 #       end
 #     end
 #   end
-# end
+end
