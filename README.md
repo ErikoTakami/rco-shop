@@ -80,7 +80,9 @@
 <a href="https://gyazo.com/a9dcfce44d14fdc31a480959588a648c"><img src="https://i.gyazo.com/a9dcfce44d14fdc31a480959588a648c.gif" alt="Image from Gyazo" width="500"/></a>
 
 ### 購入機能
-- 現在実装中です
+- 注文内容確認、送付先・カード情報入力ページ
+  - Payjpを用いた購入機能
+  - フォームオブジェクトを用いたページ実装
 
 ### 検索機能
 - 現在実装中です
@@ -95,7 +97,7 @@
 ## DB設計
 
 <br>
-<a href="https://gyazo.com/b7a57d9124cdcfd6f8af16d4f4df1ef9"><img src="https://i.gyazo.com/b7a57d9124cdcfd6f8af16d4f4df1ef9.png" alt="Image from Gyazo" width="843"/></a>
+<a href="https://gyazo.com/6f8624a909c46787616bec150e18aed5"><img src="https://i.gyazo.com/6f8624a909c46787616bec150e18aed5.png" alt="Image from Gyazo" width="898"/></a>
 <br>
 
 ## usersテーブル
@@ -109,8 +111,10 @@
 | admin                 | boolean | null: false |
 
 ### Association
-- has_many :addresses
-- has_one :cart
+- has_many :addresses, dependent: :destroy
+- has_one :cart, dependent: :destroy
+- has_many :orders, dependent: :destroy
+- has_one :card, dependent: :destroy
 
 <br>
 
@@ -145,7 +149,6 @@
 - has_many :cart_items
 - has_many :items, through: :cart_items
 - belongs_to :user
-- has_one :order
 
 <br>
 
@@ -181,14 +184,47 @@
 ### Association
 - belongs_to :cart
 - belongs_to :item
+- has_many :order_details
 
 <br>
 
 ## ordersテーブル
 
-| Column    | Type       | Options                        |
-| --------- | ---------- | ------------------------------ |
-| cart      | references | null: false, foreign_key: true |
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| total_price | integer    | null: false                    |
+| user        | references | null: false, foreign_key: true |
+| address     | references | null: false, foreign_key: true |
+| is_cancel   | boolean    | null: false, default: 0        |
 
 ### Association
-- belongs_to :cart
+- belongs_to :user
+- has_many :order_details
+
+<br>
+
+## order_detailsテーブル
+
+| Column    | Type       | Options                        |
+| --------- | ---------- | ------------------------------ |
+| order     | references | null: false, foreign_key: true |
+| cart_item | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :order
+- belongs_to :cart_item
+
+<br>
+
+## cardsテーブル
+
+| Column         | Type       | Options                        |
+| -------------- | ---------- | ------------------------------ |
+| card_token     | string     | null: false                    |
+| customer_token | string     | null: false                    |
+| user           | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+
+<br>
