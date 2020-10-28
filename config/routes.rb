@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/order', to: 'orders#index'
   get '/order/:id', to: 'orders#new'
   delete '/order/:id', to:'orders#destroy'
+  get '/done', to: 'orders#done'
 
   resources :cards, only: [:new, :create]
 end
