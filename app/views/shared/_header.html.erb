@@ -16,8 +16,12 @@
         </button>
       </form>
       <div class="cart">
-        <% if user_signed_in? %>
+        <% if user_signed_in? && Cart.exists?(session[:cart_id]) %>
           <%= link_to "/carts/#{session[:cart_id]}" do %>
+            <%= image_tag "/images/icon_crt.svg", class:"cart-icon" %>
+          <% end %>
+        <% elsif user_signed_in? && !Cart.nil? %>
+          <%= link_to cart_blank_path do %>
             <%= image_tag "/images/icon_crt.svg", class:"cart-icon" %>
           <% end %>
         <% else %>
