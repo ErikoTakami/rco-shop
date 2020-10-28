@@ -1,8 +1,5 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
-  #注文関連のコントローラー
- 
-  require 'payjp'
 
   def index
     #注文一覧       マイページで表示
@@ -24,11 +21,8 @@ class OrdersController < ApplicationController
   end
 
   def create
-    #注文を確定するボタンを押したら、createアクションが呼び出される。
-    #ordersテーブル,order_derailsテーブル,addressesテーブルに保存される。
+    #ordersテーブル,order_derailsテーブル,addressesテーブルに値が保存される。
     @item_order = ItemOrder.new(item_order_params)
-
-    # @cart = Cart.find_by(user_id: current_user.id)
     @cart_items = CartItem.where(cart_id: current_cart.id)
 
     if @item_order.valid?
@@ -40,7 +34,7 @@ class OrdersController < ApplicationController
         item = Item.find(cart_item.item_id)
         item.update(stock: item.stock - cart_item.quantity)
       end
-      redirect_to root_path
+      redirect_to done_path
     else
       render 'new'
     end
@@ -53,6 +47,9 @@ class OrdersController < ApplicationController
     #マイページで実装
   end
   
+  def done
+  end
+
   private
   def item_order_params
     params.permit(:last_name, :first_name, :last_name_kana, :first_name_kana, :postal_code, :prefecture_id, :city, :block, :building, :phone_number, 
@@ -61,17 +58,6 @@ class OrdersController < ApplicationController
 
   def payment
     Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
-    # customer = Payjp::Customer.create(
-    #   description: 'test',
-    #   card: params[:card_token]
-    # )
-
-    # @card = Card.new(
-    #   card_token: params[:card_token],
-    #   customer_token: customer.id,
-    #   user_id: current_user.id
-    # )
-
     Payjp::Charge.create(
       amount: params[:total_price],
       card: params[:card_token],
