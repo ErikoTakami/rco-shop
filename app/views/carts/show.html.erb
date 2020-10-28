@@ -1,12 +1,10 @@
 <%= render "shared/header"%>
 <div class="cart-wrapper">
-
   <div class='form-header'>
-      <h1 class='form-header-text'>
-        ショッピングカート
-      </h1>
-    </div>
-
+    <h1 class='form-header-text'>
+      ショッピングカート
+    </h1>
+  </div>
   <div class="cart-container">
     <% @cart_items.each do |cart_item| %>
       <div class="cart-item" data-id=<%= cart_item.id %>>
@@ -43,11 +41,11 @@
         </div>
       </div>
     <% end %>
-    <div class="cart-item-total-calc">
-      合計 : <span id="cart-total-price"></span>円(税込)
-    </div>
-    <%= link_to "/order/#{params[:id]}" do %>
-      <button class="to-order-btn">レジへ進む</button>
-    <% end %>
+      <div class="cart-item-total-calc">
+        合計 : <span id="cart-total-price"></span>円(税込)
+      </div>
+      <%= link_to "/order/#{params[:id]}" do %>
+        <button class="to-order-btn">レジへ進む</button>
+      <% end %>
   </div>
 </div>
