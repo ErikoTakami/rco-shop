@@ -27,6 +27,9 @@ class CartsController < ApplicationController
     @cart_item.destroy
     redirect_to current_cart
   end
+  
+  def cart_blank
+  end
 
   private
 
