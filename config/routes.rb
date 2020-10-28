@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'items#index'
-  resources :carts, only: [:show] 
+  resources :carts, only: [:show]
+  get '/cart_blank' => 'carts#cart_blank'
+  
   resources :items do
     post '/add_item' => 'carts#add_item'
     put '/update_item' => 'carts#update_item'
@@ -12,5 +14,7 @@ Rails.application.routes.draw do
   get '/order', to: 'orders#index'
   get '/order/:id', to: 'orders#new'
   delete '/order/:id', to:'orders#destroy'
+
+  resources :cards, only: [:new, :create]
 end
 
