@@ -14,7 +14,6 @@
   margin: 10px 0;
   padding: 10px 15px 20px 15px;
   display: flex;
-  /* background-color: pink; */
   position: relative;
   border-bottom: 1px solid black;
 }
@@ -34,21 +33,16 @@
 } 
 
 .cart-item-price {
-  /* border-bottom: 1px solid black; */
   padding-bottom: 4px;
 }
 
 .cart-item-price-change {
   display: flex;
   padding: 7px 0 3px 0;
-  /* background-color: yellow; */
 }
 
 .cart-item-edit {
   margin-left: 40px;
-  /* position: absolute;
-  right: 20px;
-  bottom: 40px; */
 }
 
 .cart-item-price-calc {
@@ -68,11 +62,9 @@
   font-size: 20px;
   margin-top: 10px;
   text-align: right;
+  font-weight: bold;
 }
 
-/* .quantity-submit {
-  display: none;
-} */
 .to-order-btn {
   width: 200px;
   border: 2px solid black;
@@ -81,4 +73,9 @@
   background-color: white;
   cursor: pointer;
   transition: 0.4s ;
+}
+
+.to-order-btn:hover {
+  background-color: black;
+  color: white;
 }
