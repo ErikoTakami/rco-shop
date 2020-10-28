@@ -10,7 +10,7 @@
 }
 
 .order-head-messages {
-  margin: 40px auto 20px auto;
+  margin: 80px auto 20px auto;
   text-align: center;
 }
 
@@ -24,6 +24,10 @@
   font-size: 14px;
 }
 
+.table {
+  border: 1px solid white;
+}
+
 .items-table {
   display: flex;
   flex-direction: column;
@@ -32,11 +36,56 @@
 
 .order-item-image {
   width: 85px;
-  margin: 5px 0 5px 30px;
+  margin: 5px 0 5px 10px;
 }
 
 .order-table-head {
-  padding-left: 5px;
+  font-size: 14px;
+  padding: 5px 12px;
+  background-color: #e6fafa;
+}
+
+.order-item {
+  font-size: 14px;
+  padding-right: 10px;
+}
+
+.order-price {
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.order-quantity {
+  font-size: 14px;
+  text-align: center;
+}
+
+.order-item-total-price {
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.order-total-price {
+  font-size: 18px;
+  text-align: right;
+  padding-right: 20px;
+  font-weight: bold;
+}
+
+#cart-total-price {
+  font-size: 18px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.yen {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.to-cart-link {
+  text-align: right;
+  margin-top: 15px;
 }
 
 .order-form {
@@ -48,20 +97,60 @@
   text-align: center;
 }
 
+.card-input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 190px;
+  margin-left: 55px;
+  line-height: 22px;
+  padding: 3px 3px 3px 10px;
+}
+
+.input-expiration-date-wrap {
+  display: flex;
+  margin-left: 50px;
+}
+
+.input-expiration-date {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 60px;
+  margin-right: 10px;
+  margin-left: 5px;
+  line-height: 22px;
+  padding: 5px;
+}
+
+.cvc-input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 50px;
+  margin-left: 55px;
+  line-height: 22px;
+  padding: 5px;
+}
+
 .order-form-message {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
-  margin: 60px 0 20px 0;
+  margin: 80px 0 20px 0;
+}
+
+.address-input {
+  width: 70%;
+  margin: 5px 0 0 20px;
+  height: 40px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
 }
 
 .available-card {
   text-align: center;
-}
-
-.card-logo {
-  width: 45px;
-  height: 35px;
 }
 
 .order-button {
@@ -74,4 +163,14 @@
   cursor: pointer;
   border-radius: 4px;
   margin-bottom: 40px;
+}
+
+.zipcloud_search {
+  float: right;
+  margin-right:85px;
+  margin-top: 10px;
+}
+
+.zipcloud_search + * {
+  clear: both;;
 }
