@@ -19,14 +19,13 @@ class ItemOrder
     validates :phone_number, format: { with: /\A\d{10,11}\z/, message: 'が正しくありません' }
     validates :card_token
   end
-  
 
   def save
     @address = Address.create(last_name: last_name, first_name: first_name, last_name_kana: last_name_kana, first_name_kana: first_name_kana,
                    postal_code: postal_code, prefecture_id: prefecture_id, city: city, block: block, building: building, phone_number: phone_number, user_id: user_id)
     @order = Order.create(total_price: total_price, user_id: user_id, address_id: @address.id)
     #以下,order_detailsテーブルに値を保存する処理
-    @cart = Cart.find_by(user_id: user_id)
+    @cart = Cart.order(created_at: :DESC).find_by(user_id: user_id)
     @cart_items = CartItem.where(cart_id: @cart.id)
     #gem 'activerecord-import'を使用し、複数のcart_itemをorder_detailsテーブルに保存する
     order_details = []
