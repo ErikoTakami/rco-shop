@@ -68,3 +68,9 @@ group :production do
 end
 
 gem "aws-sdk-s3", require: false
+gem 'payjp'
+
+gem 'activerecord-import'
+
+gem 'jquery-rails'
+gem 'pry-byebug'

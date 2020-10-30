@@ -1,5 +1,6 @@
 class CartsController < ApplicationController
   before_action :setup_cart_item!, only: [:show, :add_item, :update_item, :delete_item]
+  before_action :authenticate_user!
 
   def show
     @cart = Cart.find(params[:id])
@@ -25,6 +26,9 @@ class CartsController < ApplicationController
   def delete_item
     @cart_item.destroy
     redirect_to current_cart
+  end
+  
+  def cart_blank
   end
 
   private

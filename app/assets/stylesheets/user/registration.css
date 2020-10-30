@@ -45,6 +45,7 @@
   width: 30%;
   height: 20%;
   white-space: nowrap;
+  text-align: left;
 }
 
 .form-text {

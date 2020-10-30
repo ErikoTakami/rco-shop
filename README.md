@@ -67,20 +67,27 @@
   - 画像投稿機能
 - 商品詳細ページ
   - 「カートに入れる」ボタンをクリックでカートに商品を入れる
+  - 在庫(stock)が0の商品は、soldout表示がされ、「カートに入れる」ボタンを非表示にする実装
 - 商品編集・削除ページ ( 管理者ユーザーにのみ編集/削除権限を設定 )
 
 <br>
 
 ### カート機能
 - カート内商品一覧ページ
+  - sessionを用いたカート機能
   - 在庫数に応じた商品の購入数の設定機能
   - カート内商品削除機能
-  - 合計金額計算機能
+  - JavaScriptを用いた合計金額計算機能
+  - JavaScriptを用いた数量変更ボタンの実装( 変更ボタン無しで数量変更が可能 )
   <br>
 <a href="https://gyazo.com/a9dcfce44d14fdc31a480959588a648c"><img src="https://i.gyazo.com/a9dcfce44d14fdc31a480959588a648c.gif" alt="Image from Gyazo" width="500"/></a>
 
 ### 購入機能
-- 現在実装中です
+- 注文内容確認、送付先・カード情報入力ページ
+  - Payjpを用いた購入機能
+  - フォームオブジェクトを用いたページ実装
+  - 購入完了後、購入数(quantity)だけ商品の在庫数(stock)を減らす実装
+  - 購入完了後はカートのsessionを削除
 
 ### 検索機能
 - 現在実装中です
@@ -95,7 +102,7 @@
 ## DB設計
 
 <br>
-<a href="https://gyazo.com/b7a57d9124cdcfd6f8af16d4f4df1ef9"><img src="https://i.gyazo.com/b7a57d9124cdcfd6f8af16d4f4df1ef9.png" alt="Image from Gyazo" width="843"/></a>
+<a href="https://gyazo.com/6f8624a909c46787616bec150e18aed5"><img src="https://i.gyazo.com/6f8624a909c46787616bec150e18aed5.png" alt="Image from Gyazo" width="898"/></a>
 <br>
 
 ## usersテーブル
@@ -109,8 +116,10 @@
 | admin                 | boolean | null: false |
 
 ### Association
-- has_many :addresses
-- has_one :cart
+- has_many :addresses, dependent: :destroy
+- has_one :cart, dependent: :destroy
+- has_many :orders, dependent: :destroy
+- has_one :card, dependent: :destroy
 
 <br>
 
@@ -143,8 +152,8 @@
 
 ### Association
 - has_many :cart_items
+- has_many :items, through: :cart_items
 - belongs_to :user
-- has_one :order
 
 <br>
 
@@ -164,6 +173,7 @@
 
 ### Association
 - has_many :cart_items
+- has_many :carts, through: :cart_items
 - has_one_attached :image
 
 <br>
@@ -179,14 +189,47 @@
 ### Association
 - belongs_to :cart
 - belongs_to :item
+- has_many :order_details
 
 <br>
 
 ## ordersテーブル
 
-| Column    | Type       | Options                        |
-| --------- | ---------- | ------------------------------ |
-| cart      | references | null: false, foreign_key: true |
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| total_price | integer    | null: false                    |
+| user        | references | null: false, foreign_key: true |
+| address     | references | null: false, foreign_key: true |
+| is_cancel   | boolean    | null: false, default: 0        |
 
 ### Association
-- belongs_to :cart
+- belongs_to :user
+- has_many :order_details
+
+<br>
+
+## order_detailsテーブル
+
+| Column    | Type       | Options                        |
+| --------- | ---------- | ------------------------------ |
+| order     | references | null: false, foreign_key: true |
+| cart_item | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :order
+- belongs_to :cart_item
+
+<br>
+
+## cardsテーブル
+
+| Column         | Type       | Options                        |
+| -------------- | ---------- | ------------------------------ |
+| card_token     | string     | null: false                    |
+| customer_token | string     | null: false                    |
+| user           | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+
+<br>

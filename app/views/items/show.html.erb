@@ -24,6 +24,7 @@
           <%= link_to item_add_item_path(@item), method: :post do %>
             <button class="to-cart-btn">カートに入れる</button>
           <% end %>
+        <% elsif @item.stock == 0 && user_signed_in? %>
         <% else %>
           <%= link_to new_user_session_path do %>
             <button class="to-cart-btn">カートに入れる</button>
