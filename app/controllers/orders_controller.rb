@@ -23,6 +23,7 @@ class OrdersController < ApplicationController
     #ordersテーブル,order_derailsテーブル,addressesテーブルに値が保存される。
     @item_order = ItemOrder.new(item_order_params)
     @cart_items = CartItem.where(cart_id: current_cart.id)
+
     if @item_order.valid?
       payment
       @item_order.save
@@ -51,14 +52,15 @@ class OrdersController < ApplicationController
   private
   def item_order_params
     params.require(:item_order).permit(:last_name, :first_name, :last_name_kana, :first_name_kana, :postal_code, :prefecture_id,
-                  :city, :block, :building, :phone_number, :card_token, :total_price).merge(user_id: current_user.id)
+                  :city, :block, :building, :phone_number, :card_token).merge(user_id: current_user.id, total_price: params[:total_price])
   end
-  # require(:item_order)
+
   def payment
     Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
+    binding.pry
     Payjp::Charge.create(
       amount: params[:total_price],
-      card: params[:card_token],
+      card: params[:item_order][:card_token],
       currency: 'jpy'
     )
   end
