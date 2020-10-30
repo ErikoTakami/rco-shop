@@ -35,6 +35,8 @@
 ## 使用技術
 - Ruby ruby 2.6.5
 - Ruby on Rails 6.0.3.3
+- JavaScript
+- MySQL
 - heroku
 - rspec
 - rubocop
