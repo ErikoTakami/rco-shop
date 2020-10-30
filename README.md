@@ -62,7 +62,6 @@
 
 <br>管理ユーザー<br>
 <a href="https://gyazo.com/fdf12686a81fa28a4eb78a076bc2ebf0"><img src="https://i.gyazo.com/fdf12686a81fa28a4eb78a076bc2ebf0.png" alt="Image from Gyazo" width="194"/></a><br>
-<br>
 
 <br>非管理ユーザー<br>
 <a href="https://gyazo.com/e759da9dfe24c4a0bd7e7ba717e6e25e"><img src="https://i.gyazo.com/e759da9dfe24c4a0bd7e7ba717e6e25e.png" alt="Image from Gyazo" width="197"/></a>
@@ -86,8 +85,6 @@
     - soldout表示がされ、「カートに入れる」ボタンが非表示になり、購入できないようになっています
   <a href="https://gyazo.com/319f4516bea65c69a84653740a022ad2"><img src="https://i.gyazo.com/319f4516bea65c69a84653740a022ad2.png" alt="Image from Gyazo" width="700"/></a>
 <br>
-
-
 
 - 商品編集・削除ページ ( 管理者ユーザーにのみ編集/削除権限を設定 )
 
