@@ -48,15 +48,12 @@
       </table>
       <%= link_to "編集/削除", cart_path(@cart_items), class:"to-cart-link" %>
     </div>
+
     <%# 送付先、カード情報入力フォーム %>
     <div class="order-form">
-      <%= form_with model: @item_order, id: "charge-form", local: true, method: :post do |f| %>
-      <%# url: orders_path, %>
-      <%# model: @item_order, %>
+      <%= form_with model: @item_order, url: orders_path, id: "charge-form", local: true do |f| %>
         <div class='credit-card-form'>
-
-        <%#= render 'shared/error_messages', model: @item_order %>
-
+        <%= render 'shared/error_messages', model: @item_order %>
         <h1 class="order-form-message">カード情報を入力する</h1>
           <div class="form-group">
             <div class='form-text-wrap'>
