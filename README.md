@@ -17,6 +17,11 @@
 - email: rco@rco.com
 - password: rco1111
 
+#### テストカード(購入機能)
+- カード番号: 4242424242424242
+- 有効期限: 例) 3(月) / 24(年)
+- セキュリティコード: 123
+
 <br>
 
 ## 本サービスの制作背景、解決したい課題
@@ -88,6 +93,8 @@
   - フォームオブジェクトを用いたページ実装
   - 購入完了後、購入数(quantity)だけ商品の在庫数(stock)を減らす実装
   - 購入完了後はカートのsessionを削除
+  <br>
+<a href="https://gyazo.com/85d2db0e02f85d763e798cb3f07ed6cc"><img src="https://i.gyazo.com/85d2db0e02f85d763e798cb3f07ed6cc.gif" alt="Image from Gyazo" width="500"/></a>
 
 ### 検索機能
 - 現在実装中です
