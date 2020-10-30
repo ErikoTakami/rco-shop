@@ -125,7 +125,7 @@
 ## DB設計
 
 <br>
-<a href="https://gyazo.com/6f8624a909c46787616bec150e18aed5"><img src="https://i.gyazo.com/6f8624a909c46787616bec150e18aed5.png" alt="Image from Gyazo" width="898"/></a>
+<a href="https://gyazo.com/aeecc4b0401a7e27c6a9125d9e8beb95"><img src="https://i.gyazo.com/aeecc4b0401a7e27c6a9125d9e8beb95.png" alt="Image from Gyazo" width="900"/></a>
 <br>
 
 ## usersテーブル
