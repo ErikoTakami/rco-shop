@@ -60,10 +60,10 @@
 - 管理者ユーザー登録 ( devise )
 <br>
 
-<br>管理ユーザー<br>
+<br>管理者ユーザー<br>
 <a href="https://gyazo.com/fdf12686a81fa28a4eb78a076bc2ebf0"><img src="https://i.gyazo.com/fdf12686a81fa28a4eb78a076bc2ebf0.png" alt="Image from Gyazo" width="194"/></a><br>
 
-<br>非管理ユーザー<br>
+<br>通常ユーザー<br>
 <a href="https://gyazo.com/e759da9dfe24c4a0bd7e7ba717e6e25e"><img src="https://i.gyazo.com/e759da9dfe24c4a0bd7e7ba717e6e25e.png" alt="Image from Gyazo" width="197"/></a>
 <br>
 
@@ -82,8 +82,8 @@
   <a href="https://gyazo.com/55e136bb6a251491aad23964bd092d43"><img src="https://i.gyazo.com/55e136bb6a251491aad23964bd092d43.png" alt="Image from Gyazo" width="700"/></a>
 
   - 在庫が無い商品(売り切れ)
-    - soldout表示がされ、「カートに入れる」ボタンが非表示になり、購入できないようになっています
-  <a href="https://gyazo.com/319f4516bea65c69a84653740a022ad2"><img src="https://i.gyazo.com/319f4516bea65c69a84653740a022ad2.png" alt="Image from Gyazo" width="700"/></a>
+    - soldout表示(赤い部分)がされ、「カートに入れる」ボタンが非表示になり、購入できないようになっています
+  <a href="https://gyazo.com/2897d494a79f856e7db270580cc98410"><img src="https://i.gyazo.com/2897d494a79f856e7db270580cc98410.png" alt="Image from Gyazo" width="700"/></a>
 <br>
 
 - 商品編集・削除ページ ( 管理者ユーザーにのみ編集/削除権限を設定 )
@@ -115,6 +115,7 @@
 <br>
 
 ## 今後実装したい機能
+- 2段階認証を用いた新規登録機能
 - お店の魅力を伝えるために、店舗紹介ページを作成する。GoogleMapAPIを用いて、店舗の地図を表示する。
 
 <br>
