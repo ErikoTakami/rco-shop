@@ -7,6 +7,8 @@
 ## 概要
 - レコードを販売している珍しいコンビニの商品を購入できるサービスです。
 
+<br>
+
 ## URL  10/31現在、本番環境修正中です
 - https://record-conveni-online.herokuapp.com/
 #### basic認証
