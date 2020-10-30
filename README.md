@@ -59,17 +59,15 @@
 ### 管理者機能
 - 管理者ユーザー登録 ( devise )
 
-管理者ユーザー
+↓管理者ユーザー
 
 <a href="https://gyazo.com/fdf12686a81fa28a4eb78a076bc2ebf0"><img src="https://i.gyazo.com/fdf12686a81fa28a4eb78a076bc2ebf0.png" alt="Image from Gyazo" width="194"/></a>
 
-通常ユーザー
+↓通常ユーザー
 
 <a href="https://gyazo.com/e759da9dfe24c4a0bd7e7ba717e6e25e"><img src="https://i.gyazo.com/e759da9dfe24c4a0bd7e7ba717e6e25e.png" alt="Image from Gyazo" width="197"/></a>
 
 管理者ユーザーにのみ、ヘッダー右上部に出品ページへのリンクが表示されるようにしています
-
-
 
 ### 商品関連
 - 商品一覧ページ ( トップページ )
@@ -85,7 +83,6 @@
   - 在庫が無い商品(売り切れ)
     - soldout表示(赤い部分)がされ、「カートに入れる」ボタンが非表示になり、購入できないようになっています
   <a href="https://gyazo.com/9ad39776a1a2255a3b16713dbafc2c7d"><img src="https://i.gyazo.com/9ad39776a1a2255a3b16713dbafc2c7d.png" alt="Image from Gyazo" width="800"/></a>
-<br>
 
 ### カート機能
 - カート内商品一覧ページ
