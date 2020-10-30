@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
-
+  require 'payjp'
   def index
     #注文一覧       マイページで表示
     #deviseのcurrent_userを渡す
@@ -11,7 +11,6 @@ class OrdersController < ApplicationController
   def new
     @cart_items = current_cart.cart_items.order(created_at: :DESC)
     @item_order = ItemOrder.new
-
     #住所入力、保存（住所がある場合は、住所を表示する）
       #addressが存在する     address#show
       #addressが存在しない   address#new
@@ -24,7 +23,6 @@ class OrdersController < ApplicationController
     #ordersテーブル,order_derailsテーブル,addressesテーブルに値が保存される。
     @item_order = ItemOrder.new(item_order_params)
     @cart_items = CartItem.where(cart_id: current_cart.id)
-
     if @item_order.valid?
       payment
       @item_order.save
@@ -36,7 +34,7 @@ class OrdersController < ApplicationController
       end
       redirect_to done_path
     else
-      render 'new'
+      render :new
     end
   end
 
@@ -52,10 +50,10 @@ class OrdersController < ApplicationController
 
   private
   def item_order_params
-    params.permit(:last_name, :first_name, :last_name_kana, :first_name_kana, :postal_code, :prefecture_id, :city, :block, :building, :phone_number, 
-    :card_token, :total_price).merge(user_id: current_user.id)
+    params.require(:item_order).permit(:last_name, :first_name, :last_name_kana, :first_name_kana, :postal_code, :prefecture_id,
+                  :city, :block, :building, :phone_number, :card_token, :total_price).merge(user_id: current_user.id)
   end
-
+  # require(:item_order)
   def payment
     Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
     Payjp::Charge.create(
