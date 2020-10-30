@@ -89,8 +89,6 @@
   <a href="https://gyazo.com/9ad39776a1a2255a3b16713dbafc2c7d"><img src="https://i.gyazo.com/9ad39776a1a2255a3b16713dbafc2c7d.png" alt="Image from Gyazo" width="800"/></a>
 <br>
 
-<br>
-
 ### カート機能
 - カート内商品一覧ページ
   - sessionを用いたカート機能
