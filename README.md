@@ -9,7 +9,7 @@
 
 <br>
 
-## URL  10/31現在、本番環境修正中です
+## URL
 - https://record-conveni-online.herokuapp.com/
 #### basic認証
 - ID: rco
