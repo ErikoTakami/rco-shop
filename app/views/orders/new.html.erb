@@ -118,7 +118,7 @@
               <label class="form-text">郵便番号</label>
               <span class="indispensable">必須</span>
             </div>
-            <%= f.text_field :postal_code, class:"address-input", id:"sample1_zip", placeholder:"ハイフンが必要です" %>
+            <%= f.text_field :postal_code, class:"address-input", id:"zipcode", placeholder:"ハイフンが必要です" %>
           </div>
 
           <%# <button type="button" class="zipcloud_search" id="zipcloud_search">郵便番号から住所を検索</button> %>
@@ -128,21 +128,21 @@
               <label class="form-text">都道府県</label>
               <span class="indispensable">必須</span>
             </div>
-            <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"address-input mdl-js-textfield", id:"stateSelectBox"})%>
+            <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"address-input"})%>
           </div>
           <div class="form-group">
             <div class='form-text-wrap'>
               <label class="form-text">市区町村</label>
               <span class="indispensable">必須</span>
             </div>
-            <%= f.text_field :city, class:"address-input mdl-js-textfield", id:"sample1_address2" %>
+            <%= f.text_field :city, class:"address-input", id:"address-two" %>
           </div>
           <div class="form-group">
             <div class='form-text-wrap'>
               <label class="form-text">それ以降の住所</label>
               <span class="indispensable">必須</span>
             </div>
-            <%= f.text_field :block, class:"address-input mdl-js-textfield", id:"sample1_address3" %>
+            <%= f.text_field :block, class:"address-input", id:"address-three" %>
           </div>
           <div class="form-group">
             <div class='form-text-wrap'>
