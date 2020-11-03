@@ -6,14 +6,10 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all'%>
     <%= javascript_pack_tag 'application' %>
-    <%# <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> %>
-    <%# <script src="postCode.js"></script> %>
     <script src="https://js.pay.jp/" , type="text/javascript"></script>
-
+    <script type="text/javascript" src="https://postcode-jp.com/js/postcodejp.js" charset="utf-8"></script>
   </head>
-
   <body>
     <%= yield %>
   </body>
 </html>
-<%# 'data-turbolinks-track': 'reload' %>
