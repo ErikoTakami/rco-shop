@@ -104,6 +104,7 @@
 <a href="https://gyazo.com/85d2db0e02f85d763e798cb3f07ed6cc"><img src="https://i.gyazo.com/85d2db0e02f85d763e798cb3f07ed6cc.gif" alt="Image from Gyazo" width="800"/></a>
 
   - 郵便番号APIを用いた実装
+  
   <a href="https://gyazo.com/7fe9769f25b2ba4ae1bc56313d3c1c59"><img src="https://i.gyazo.com/7fe9769f25b2ba4ae1bc56313d3c1c59.gif" alt="Image from Gyazo" width="730"/></a>
   <br>
 
