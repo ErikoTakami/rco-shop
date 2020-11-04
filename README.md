@@ -10,7 +10,7 @@
 <br>
 
 ## URL
-- https://record-conveni-online.herokuapp.com/
+- http://54.248.96.104/
 #### basic認証
 - ID: rco
 - password: rco
@@ -35,14 +35,14 @@
 <br>
 
 ## 使用技術
-- Ruby ruby 2.6.5
-- Ruby on Rails 6.0.3.3
-- JavaScript
-- MySQL
-- heroku
-- rspec
-- rubocop
-- AWS(S3) 
+- HTML/CSS/Git/GitHub/JavaScript/Ruby'2.6.5'/Ruby on Rails'6.0.3.3'
+- 単体テストコード(RSpec)
+- AWS（EC2/S3）
+- アプリケーションサーバー（Unicorn）
+- Webサーバー（Nginx）
+- データベース（mariaDB）
+- 自動デプロイ（Capistrano3.14.1）
+- 静的コード解析（RuboCop）
 
 <br>
 
