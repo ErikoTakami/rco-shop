@@ -10,7 +10,8 @@
 <br>
 
 ## URL
-- http://54.248.96.104/
+- https://record-conveni-online.herokuapp.com/
+- http://54.248.96.104/ (修正中)
 #### basic認証
 - ID: rco
 - password: rco
