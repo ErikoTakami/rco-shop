@@ -37,7 +37,7 @@
 ## 使用技術
 - HTML/CSS/Git/GitHub/JavaScript/Ruby'2.6.5'/Ruby on Rails'6.0.3.3'
 - 単体テストコード(RSpec)
-- AWS（EC2/S3/Route53）
+- AWS（EC2/VPC/Route53/ELB/ACM/S3）
 - アプリケーションサーバー（Unicorn）
 - Webサーバー（Nginx）
 - データベース（mariaDB）
