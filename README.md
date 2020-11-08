@@ -10,7 +10,7 @@
 <br>
 
 ## URL
-- www.record-conveni.com
+- https://www.record-conveni.com/
 #### basic認証
 - ID: rco
 - password: rco
@@ -115,7 +115,6 @@
 <br>
 
 ## 今後実装したい機能
-- 通信のhttps化
 - Payjpのデフォルトカード機能
 - お店の魅力を伝えるために、店舗紹介ページを作成する。GoogleMapAPIを用いて、店舗の地図を表示する。
 
