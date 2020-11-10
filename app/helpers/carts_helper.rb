@@ -1,5 +1,5 @@
 module CartsHelper
-  def stock_array_maker(cart_item)
+  def stock_array_maker(cart_item)              #在庫(stock)の数をプルダウン表示する
     current_stock_array = []                    #配列を生成
 
     stock = cart_item.item.stock
