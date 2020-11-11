@@ -16,6 +16,6 @@ Rails.application.routes.draw do
 
   resources :cards, only: [:new, :create]
 
-  get '/keyword', :to 'searches#keyword'
+  get '/keyword', to: 'searches#keyword'
 end
 
