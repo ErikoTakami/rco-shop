@@ -10,7 +10,7 @@
     </div>
     <div class="header-right">
       <%= search_form_for @q, url: search_path, class:"search-form", method: :get do |f| %>
-        <%= f.text_field :title_or_artist_cont, class:"input-box" %>
+        <%= f.text_field :title_or_artist_cont, class:"input-box", placeholder:"アルバムタイトル、アーティスト名などで検索" %>
         <%= f.submit value:"", class:"search-button" %>
       <% end %>
       <div class="cart">
