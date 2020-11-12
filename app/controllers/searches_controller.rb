@@ -1,5 +1,5 @@
 class SearchesController < ApplicationController
-  before_action :search
+  before_action :search, only: :index
   
   def index
   end
@@ -11,7 +11,7 @@ class SearchesController < ApplicationController
 
   def search
     @q = Item.ransack(params[:q])
-    @result = @q.result
+    @results = @q.result
   end
 
 end
