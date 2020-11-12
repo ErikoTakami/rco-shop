@@ -1,7 +1,7 @@
 class SearchesController < ApplicationController
   before_action :search
   
-  def keyword
+  def index
   end
 
   # def sort_order
@@ -10,8 +10,8 @@ class SearchesController < ApplicationController
   private
 
   def search
-    @p = Item.ransack(params[:q])
-    @result = @p.result
+    @q = Item.ransack(params[:q])
+    @result = @q.result
   end
 
 end
