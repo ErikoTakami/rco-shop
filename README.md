@@ -79,11 +79,11 @@
 - 商品詳細ページ
   - 在庫がある商品
     - 「カートに入れる」ボタンをクリックでカートに商品を入れることができます
- <a href="https://gyazo.com/6129f928456eb010523c312fe48ed8ff"><img src="https://i.gyazo.com/6129f928456eb010523c312fe48ed8ff.png" alt="Image from Gyazo" width="800"/></a>
+ <a href="https://gyazo.com/6129f928456eb010523c312fe48ed8ff"><img src="https://i.gyazo.com/6129f928456eb010523c312fe48ed8ff.png" alt="Image from Gyazo" width="700"/></a>
 
   - 在庫が無い商品(売り切れ)
     - soldout表示(赤い部分)がされ、「カートに入れる」ボタンが非表示になり、購入できないようになっています
-  <a href="https://gyazo.com/9ad39776a1a2255a3b16713dbafc2c7d"><img src="https://i.gyazo.com/9ad39776a1a2255a3b16713dbafc2c7d.png" alt="Image from Gyazo" width="800"/></a>
+  <a href="https://gyazo.com/9ad39776a1a2255a3b16713dbafc2c7d"><img src="https://i.gyazo.com/9ad39776a1a2255a3b16713dbafc2c7d.png" alt="Image from Gyazo" width="700"/></a>
 
 ### カート機能
 - カート内商品一覧ページ
@@ -93,7 +93,7 @@
   - JavaScriptを用いた合計金額計算機能
   - JavaScriptを用いた数量変更ボタンの実装( 変更ボタン無しで数量変更が可能 )
   <br>
-<a href="https://gyazo.com/a9dcfce44d14fdc31a480959588a648c"><img src="https://i.gyazo.com/a9dcfce44d14fdc31a480959588a648c.gif" alt="Image from Gyazo" width="800"/></a>
+<a href="https://gyazo.com/a9dcfce44d14fdc31a480959588a648c"><img src="https://i.gyazo.com/a9dcfce44d14fdc31a480959588a648c.gif" alt="Image from Gyazo" width="700"/></a>
 
 ### 購入機能
 - 注文内容確認、送付先・カード情報入力ページ
@@ -101,19 +101,22 @@
   - フォームオブジェクトを用いたページ実装
   - 購入完了後、購入数(quantity)だけ商品の在庫数(stock)を減らす実装
   - 購入完了後はカートのsessionを削除
-<a href="https://gyazo.com/85d2db0e02f85d763e798cb3f07ed6cc"><img src="https://i.gyazo.com/85d2db0e02f85d763e798cb3f07ed6cc.gif" alt="Image from Gyazo" width="800"/></a>
+<a href="https://gyazo.com/85d2db0e02f85d763e798cb3f07ed6cc"><img src="https://i.gyazo.com/85d2db0e02f85d763e798cb3f07ed6cc.gif" alt="Image from Gyazo" width="700"/></a>
 
   - 郵便番号APIを用いた実装( PostcodeJP API )
   
-  <a href="https://gyazo.com/7fe9769f25b2ba4ae1bc56313d3c1c59"><img src="https://i.gyazo.com/7fe9769f25b2ba4ae1bc56313d3c1c59.gif" alt="Image from Gyazo" width="730"/></a>
+  <a href="https://gyazo.com/7fe9769f25b2ba4ae1bc56313d3c1c59"><img src="https://i.gyazo.com/7fe9769f25b2ba4ae1bc56313d3c1c59.gif" alt="Image from Gyazo" width="600"/></a>
   <br>
 
 
 ### 検索機能
-- gem'ransack'を用いた検索機能の実装( キーワード検索、ジャンル・フォーマット検索等に対応 )
-<a href="https://gyazo.com/cf607094a4b0522c6d7341122100d6e1"><img src="https://i.gyazo.com/cf607094a4b0522c6d7341122100d6e1.gif" alt="Image from Gyazo" width="750"/></a>
-<br>
-<a href="https://gyazo.com/786e474dc2dea81c168256eea546881b"><img src="https://i.gyazo.com/786e474dc2dea81c168256eea546881b.gif" alt="Image from Gyazo" width="750"/></a>
+- gem'ransack'を用いた検索機能の実装
+
+キーワード検索
+<a href="https://gyazo.com/cf607094a4b0522c6d7341122100d6e1"><img src="https://i.gyazo.com/cf607094a4b0522c6d7341122100d6e1.gif" alt="Image from Gyazo" width="500"/></a>
+
+ジャンル・フォーマット・価格帯検索
+<a href="https://gyazo.com/786e474dc2dea81c168256eea546881b"><img src="https://i.gyazo.com/786e474dc2dea81c168256eea546881b.gif" alt="Image from Gyazo" width="500"/></a>
 
 <br>
 
