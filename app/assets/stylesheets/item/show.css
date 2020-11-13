@@ -105,4 +105,16 @@
 
 .to-edit-btn {
   margin-left: 15px;
+  width: 100px;
+  border: 2px solid black;
+  padding: 7px;
+  text-align: center;
+  background-color:white;
+  cursor: pointer;
+  transition: 0.4s ;
+}
+
+.to-edit-btn:hover {
+  background-color: black;
+  color: white;
 }

@@ -9,12 +9,10 @@
       <%= link_to image_tag('/images/rco_logo.svg', class:"rco-logo"), root_path %>
     </div>
     <div class="header-right">
-      <form class="search-form" action="#">
-        <input class='input-box'>
-        <button class="search-button">
-          <%= image_tag "/images/icon_src.svg", class:"search-icon" %>
-        </button>
-      </form>
+      <%= search_form_for @q, url: search_path, class:"search-form", method: :get do |f| %>
+        <%= f.text_field :title_or_artist_cont, class:"input-box", placeholder:"アルバムタイトル、アーティスト名などで検索" %>
+        <%= f.submit value:"", class:"search-button" %>
+      <% end %>
       <div class="cart">
         <% if user_signed_in? && Cart.exists?(session[:cart_id]) %>
           <%= link_to "/carts/#{session[:cart_id]}" do %>

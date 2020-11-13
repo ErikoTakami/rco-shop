@@ -12,12 +12,13 @@ Rails.application.routes.draw do
   end
 
   resources :orders, only: [:index, :new, :create, :destroy]
-  # post '/orders', to: 'orders#create'
-  # get '/orders', to: 'orders#index'
-  # get '/orders/:id', to: 'orders#new'
-  # delete '/orders/:id', to:'orders#destroy'
   get '/done', to: 'orders#done'
 
   resources :cards, only: [:new, :create]
+
+  get '/search', to: 'searches#index'
+  get '/sort_order', to: 'searches#sort_order'
+  # get 'search/keyword'
+  # get 'search/sort_order'
 end
 

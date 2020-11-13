@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :basic_auth
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :search
   protect_from_forgery with: :exception
 
   helper_method :current_cart
@@ -28,5 +29,9 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :admin])
+  end
+
+  def search 
+    @q = Item.ransack(params[:q])
   end
 end

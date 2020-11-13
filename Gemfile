@@ -80,3 +80,5 @@ gem 'activerecord-import'
 
 gem 'jquery-rails'
 gem 'pry-byebug'
+
+gem 'ransack'
