@@ -103,14 +103,17 @@
   - 購入完了後はカートのsessionを削除
 <a href="https://gyazo.com/85d2db0e02f85d763e798cb3f07ed6cc"><img src="https://i.gyazo.com/85d2db0e02f85d763e798cb3f07ed6cc.gif" alt="Image from Gyazo" width="800"/></a>
 
-  - 郵便番号APIを用いた実装(PostcodeJP API)
+  - 郵便番号APIを用いた実装( PostcodeJP API )
   
   <a href="https://gyazo.com/7fe9769f25b2ba4ae1bc56313d3c1c59"><img src="https://i.gyazo.com/7fe9769f25b2ba4ae1bc56313d3c1c59.gif" alt="Image from Gyazo" width="730"/></a>
   <br>
 
 
 ### 検索機能
-- 現在実装中です
+- gem'ransack'を用いた検索機能の実装( キーワード検索、ジャンル・フォーマット検索等に対応 )
+<a href="https://gyazo.com/cf607094a4b0522c6d7341122100d6e1"><img src="https://i.gyazo.com/cf607094a4b0522c6d7341122100d6e1.gif" alt="Image from Gyazo" width="750"/></a>
+<br>
+<a href="https://gyazo.com/786e474dc2dea81c168256eea546881b"><img src="https://i.gyazo.com/786e474dc2dea81c168256eea546881b.gif" alt="Image from Gyazo" width="750"/></a>
 
 <br>
 
