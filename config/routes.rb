@@ -17,5 +17,8 @@ Rails.application.routes.draw do
   resources :cards, only: [:new, :create]
 
   get '/search', to: 'searches#index'
+  get '/sort_order', to: 'searches#sort_order'
+  # get 'search/keyword'
+  # get 'search/sort_order'
 end
 
