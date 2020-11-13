@@ -114,11 +114,11 @@
 
 価格、出品日による並び替え、ジャンル・フォーマット・価格帯検索
 
-<a href="https://gyazo.com/59e11afe47f83295594623ae99c556b7"><img src="https://i.gyazo.com/59e11afe47f83295594623ae99c556b7.gif" alt="Image from Gyazo" width="500"/></a>
+<a href="https://gyazo.com/59e11afe47f83295594623ae99c556b7"><img src="https://i.gyazo.com/59e11afe47f83295594623ae99c556b7.gif" alt="Image from Gyazo" width="700"/></a>
 
 キーワード検索
 
-<a href="https://gyazo.com/cf607094a4b0522c6d7341122100d6e1"><img src="https://i.gyazo.com/cf607094a4b0522c6d7341122100d6e1.gif" alt="Image from Gyazo" width="500"/></a>
+<a href="https://gyazo.com/cf607094a4b0522c6d7341122100d6e1"><img src="https://i.gyazo.com/cf607094a4b0522c6d7341122100d6e1.gif" alt="Image from Gyazo" width="700"/></a>
 
 
 <br>
